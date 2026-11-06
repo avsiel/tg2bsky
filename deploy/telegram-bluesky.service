@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram -> Bluesky auto-publisher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/telegram-bluesky
+EnvironmentFile=/opt/telegram-bluesky/.env
+ExecStart=/opt/telegram-bluesky/.venv/bin/python main.py
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target

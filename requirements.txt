@@ -1,0 +1,6 @@
+# Dependencies are intentionally minimal and free.
+# We use `requests` (or urllib) for HTTP and the standard `sqlite3`.
+# No paid SDKs, no external services.
+
+requests>=2.31.0
+python-dotenv>=1.0.0
